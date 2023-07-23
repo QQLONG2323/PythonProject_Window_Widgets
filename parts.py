@@ -19,15 +19,17 @@ class TopFrame(ttk.LabelFrame):
         flowerImage1 = Image.open("./images/flower1.png")
         self.flowerPhoto1 = ImageTk.PhotoImage(flowerImage1)
         self.canvas.create_image(0,5,image=self.flowerPhoto1,anchor="nw")
-        self.canvas.create_text(0, 200, text='Flower', fill='yellow', font=('verdana', 36), anchor='sw')
+        self.canvas.create_text(0, 200, text='Flower', fill='yellow', font=('Verdana', 36), anchor='sw')
         #在畫布內放置第二張圖
         diamondImage1 = Image.open("./images/diamond.png")
         self.diamondPhoto1 = ImageTk.PhotoImage(diamondImage1)
         self.canvas.create_image(175, 5, image=self.diamondPhoto1,anchor='nw')
+        self.canvas.create_text(175, 150, text='diamond', fill='red', font=('Arial', 20), anchor='sw')
         #在畫布內放置第三張圖
         atomImage1 = Image.open("./images/atom.png")
         self.atomPhoto1 = ImageTk.PhotoImage(atomImage1)
         self.canvas.create_image(280,5,image=self.atomPhoto1,anchor='nw')
+        self.canvas.create_text(296, 115, text='atom', fill='green', font=('Helvetica', 20), anchor='sw')
         #created ttk.scrollbar(滾動條) of tkinter in canvas
         self.scrollbar = ttk.Scrollbar(self, orient='horizontal', command=self.canvas.xview)
         self.scrollbar.pack(side='bottom', fill='x')
