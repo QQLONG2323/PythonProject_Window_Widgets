@@ -47,9 +47,9 @@ class MedianFrame(ttk.LabelFrame):
         radionFrame = ttk.LabelFrame(self, text='Radio Buttons')
         radionFrame.pack(side=tk.LEFT, padx=10, pady=10)
         self.radioStringVar = tk.StringVar()
-        self.radiobutton1 = ttk.Radiobutton(radionFrame, text='Option 1',variable=self.radioStringVar,value="red",command=self.radioEvent)
+        self.radiobutton1 = ttk.Radiobutton(radionFrame, text='Option 1', variable=self.radioStringVar,value="red",command=self.radioEvent)
         self.radiobutton1.pack()
-        self.radiobutton2 = ttk.Radiobutton(radionFrame, text='Option 2',variable=self.radioStringVar,value="blue",command=self.radioEvent)
+        self.radiobutton2 = ttk.Radiobutton(radionFrame, text='Option 2', variable=self.radioStringVar,value="blue",command=self.radioEvent)
         self.radiobutton2.pack()
         self.radiobutton3 = ttk.Radiobutton(radionFrame, text='Option 3', variable=self.radioStringVar,value="green",command=self.radioEvent)
         self.radiobutton3.pack()
@@ -57,7 +57,7 @@ class MedianFrame(ttk.LabelFrame):
         self.radiobutton4.pack()
         self.radioStringVar.set('red')
 
-         # create ttk.checkbuttons in self
+        # create ttk.checkbuttons in self
         checkFrames = ttk.LabelFrame(self, text='Check Buttons')
         checkFrames.pack(side=tk.RIGHT, padx=10, pady=10)
 
@@ -66,9 +66,9 @@ class MedianFrame(ttk.LabelFrame):
         self.checkStringVar3 = tk.StringVar()
         self.checkStringVar4 = tk.StringVar()
 
-        self.checkbutton1 = ttk.Checkbutton(checkFrames, text='Option 1',variable=self.checkStringVar1,command=self.checkEvent,onvalue='op1check',offvalue='op1off')
+        self.checkbutton1 = ttk.Checkbutton(checkFrames, text='Option 1', variable=self.checkStringVar1,command=self.checkEvent,onvalue='op1check',offvalue='op1off')
         self.checkbutton1.pack()
-        self.checkbutton2 = ttk.Checkbutton(checkFrames, text='Option 2',variable=self.checkStringVar2,command=self.checkEvent,onvalue='op2check',offvalue='op2off')
+        self.checkbutton2 = ttk.Checkbutton(checkFrames, text='Option 2', variable=self.checkStringVar2,command=self.checkEvent,onvalue='op2check',offvalue='op2off')
         self.checkbutton2.pack()
         self.checkbutton3 = ttk.Checkbutton(checkFrames, text='Option 3', variable=self.checkStringVar3,command=self.checkEvent,onvalue='op3check',offvalue='op3off')
         self.checkbutton3.pack()
@@ -78,6 +78,7 @@ class MedianFrame(ttk.LabelFrame):
     
     def radioEvent(self):
         self.w.radioButtonEventOfMedianFrame(self.radioStringVar.get())
+        print()
     #def radioEvent(self):
     #    print(self.radioStringVar.get())
 
@@ -86,4 +87,4 @@ class MedianFrame(ttk.LabelFrame):
         print(self.checkStringVar2.get())
         print(self.checkStringVar3.get())
         print(self.checkStringVar4.get())
-
+        print()

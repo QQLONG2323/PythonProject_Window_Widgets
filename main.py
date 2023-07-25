@@ -10,10 +10,10 @@ class Window(tk.Tk):
         super().__init__()
         topFrame = TopFrame(self, borderwidth=0)
         topFrame.pack()
-        medianFrame = MedianFrame(self,borderwidth=0)
+        medianFrame = MedianFrame(self, borderwidth=0)
         medianFrame.pack(fill=tk.X)
 
-    def radioButtonEventOfMedianFrame(self,radioButtonValue):
+    def radioButtonEventOfMedianFrame(self, radioButtonValue):
         print(radioButtonValue)
 
 
